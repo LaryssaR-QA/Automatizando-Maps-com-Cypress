@@ -7,6 +7,10 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "^12.3.0",
-    "cypress-browser-permissions": "^1.1.0"
+    "cypress-browser-permissions": "^1.1.0",
+    "cypress-mongodb": "^5.1.4"
+  },
+  "dependencies": {
+    "mongodb": "^4.13.0"
   }
 }
