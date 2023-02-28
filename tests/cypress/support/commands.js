@@ -1,21 +1,28 @@
-//COMMANDS em pages
-// Cypress.Commands.add('login', (user)=> {
-//     cy.visit('/')
-//     if (user.instagram) cy.get('input[name=instagram]').type(user.instagram)//se conter campo preenchido executa o cod
-//     if (user.password) cy.get('input[name=password]').type(user.password)
-  
-//     cy.contains('button', 'Entrar').click()
-//   })
-  
-  // Cypress.Commands.add('modalHaveText', (Text)=>{
-  //   cy.get('.swal2-html-container')//class
-  //     .should('be.visible')
-  //     .should('have.text', Text)
-  // })
-  
-  // Cypress.Commands.add('loggedUser', (name)=> {
-  //   cy.get('.logged-user')//class
-  //   .should('be.visible')
-  //   .should('have.text', `Olá, ${name}`)
-  
-  // })
+// ***********************************************
+// This example commands.js shows you how to
+// create various custom commands and overwrite
+// existing commands.
+//
+// For more comprehensive examples of custom
+// commands please read more here:
+// https://on.cypress.io/custom-commands
+// ***********************************************
+//
+//
+// -- This is a parent command --
+// Cypress.Commands.add('login', (email, password) => { ... })
+//
+//
+// -- This is a child command --
+// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
+//
+//
+// -- This is a dual command --
+// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
+//
+//
+// -- This will overwrite an existing command --
+// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+import './commands/api'
+import './commands/ui'

@@ -16,8 +16,6 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-const mongo = require('cypress-mongodb') //funções do bando de dados como operações nativas
-mongo.addCommands()
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

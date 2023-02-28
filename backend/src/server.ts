@@ -7,7 +7,7 @@ import mongoose from 'mongoose'
 import routes from './routes';
 import errorHandler from './errors/handler';
 
-const mongoURI = 'mongodb+srv://qa:cademy@cluster0.eqzgc2b.mongodb.net/QtruckDB?retryWrites=true&w=majority'
+const mongoURI = 'mongodb+srv://qa:cademy@cluster0.sqvubnt.mongodb.net/QtruckDB3?retryWrites=true&w=majority'
 
 mongoose.connect(mongoURI)
 

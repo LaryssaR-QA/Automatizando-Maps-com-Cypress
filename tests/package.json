@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "description": "Projeto de testes de ponta a ponta na web app Qtruck",
   "main": "index.js",
-  "author": "Laryssa Ribeiro",
+  "author": "Fernando Papito",
   "license": "MIT",
-  "devDependencies": {
-    "cypress": "^12.3.0",
-    "cypress-browser-permissions": "^1.1.0",
-    "cypress-mongodb": "^5.1.4"
+  "scripts": {
+    "test:dev": "node cypress.dev.run.js",
+    "test:stage": "node cypress.stage.run.js"
   },
-  "dependencies": {
-    "mongodb": "^4.13.0"
+  "devDependencies": {
+    "cypress": "^10.4.0",
+    "cypress-browser-permissions": "^1.1.0",
+    "cypress-tesults-reporter": "^1.2.0"
   }
 }

@@ -1,24 +1,25 @@
-import modal from  '../Components/modal'
+import modal from '../components/Modal'
 
-class SignupPage {  //class orientada por funções p/cadastrar usuario
+class SignupPage {
 
-    constructor(){//propriedade da class modal
+    constructor() {
         this.modal = modal
     }
-    go(){
+
+    go() {
         cy.visit('/signup')
     }
 
-    form(user){
-        if (user.name) cy.get('input[name=name]').type(user.instagram)//se conter campo preenchido executa o cod
+    form(user) {
+        if (user.name) cy.get('input[name=name]').type(user.name)
         if (user.instagram) cy.get('input[name=instagram]').type(user.instagram)
         if (user.password) cy.get('input[name=password]').type(user.password)
     }
 
-    submit(){
-        cy.contains('button', 'Cadastrar').click()
+    submit() {
+        cy.contains('button', 'Cadastrar')
+            .click({ force: true })
     }
-
 }
 
 export default new SignupPage()

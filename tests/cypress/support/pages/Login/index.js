@@ -1,23 +1,41 @@
-import modal from  '../Components/modal'
+import modal from '../components/Modal'
 
-class loginPage {  //class orientada por funções
+class LoginPage {
 
-    constructor(){//propriedade da class modal
+    constructor() {
         this.modal = modal
     }
-    go(){
-        cy.visit('/')
+
+    go(lat = '-23.55052', long = '-46.633309') {
+        cy.visit('/', this.mockLocation(lat, long))
     }
 
-    form(user){
-        if (user.instagram) cy.get('input[name=instagram]').type(user.instagram)//se conter campo preenchido executa o cod
+    form(user) {
+        if (user.instagram) cy.get('input[name=instagram]').type(user.instagram)
         if (user.password) cy.get('input[name=password]').type(user.password)
     }
 
-    submit(){
+    submit() {
         cy.contains('button', 'Entrar').click()
+    }
+
+    goToSignup() {
+        cy.contains('a', 'Cadastre-se').click()
+    }
+
+    mockLocation(latitude, longitude) {
+        return {
+            onBeforeLoad(win) {
+                cy.stub(win.navigator.geolocation, "getCurrentPosition").callsFake((cb, err) => {
+                    if (latitude && longitude) {
+                        return cb({ coords: { latitude, longitude } })
+                    }
+                    throw err({ code: 1 })
+                });
+            }
+        }
     }
 
 }
 
-export default new loginPage()
+export default new LoginPage()
