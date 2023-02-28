@@ -1,16 +1,14 @@
 {
-  "name": "qtruck-tests",
-  "version": "1.0.0",
-  "description": "Projeto de testes de ponta a ponta na web app Qtruck",
-  "main": "index.js",
-  "author": "Laryssa Ribeiro",
-  "license": "MIT",
   "devDependencies": {
-    "cypress": "^12.3.0",
-    "cypress-browser-permissions": "^1.1.0",
-    "cypress-mongodb": "^5.1.4"
+    "cypress": "^12.7.0",
+    "cypress-browser-permissions": "^1.1.0"
   },
   "dependencies": {
-    "mongodb": "^4.13.0"
-  }
+    "@babel/preset-env": "^7.20.2",
+    "gulp-imagemin": "^8.0.0",
+    "mongodb": "^5.1.0",
+    "mysql": "^2.18.1",
+    "react-scripts": "^5.0.1"
+  },
+  "type": "commonjs"
 }
